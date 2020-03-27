@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>MadLibs // landonisonline</title>
+</head>
+
+<body>
+    <h1>Mad Libs</h1>
+    <div>
+        <ul>
+            <li>Singular Noun: <input type="text" id="noun">
+            <li>Adjective: <input type="text" id="adj">
+            <li>Someone's Name: <input type="text" id="person">
+        </ul>
+    </div>
+    <button id="lib-button" onclick="makeMadLib()">Lib it!</button>
+    <br />
+    <br />
+
+    <div id="story"></div>
+
+    <script>
+    
+    function makeMadLib(){
+        var noun = document.getElementById("noun").value;
+        var adj = document.getElementById("adj").value;
+        var person = document.getElementById("person").value;
+
+        document.getElementById("story").innerHTML = `On my last brithday, my family and my best friend, ${person}, gathered around to eat cake & open  my gifts. When I was opening ${person}'s present I was shocked to see they had gotten me a ${noun}. It was a really ${adj} birthday!`
+    };
+
+
+    </script>
+</body>
+
+</html>
